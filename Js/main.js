@@ -8,7 +8,7 @@ const app = new Vue({
     methods: {
         addTask(){
             if (this.newTask === '') {
-                alert('Empty');
+                swal("Error!", "Input Empty", "error");
             } else {
                 this.tasks.push({
                     name: this.newTask,
@@ -22,6 +22,9 @@ const app = new Vue({
         editTask(index){
             this.tasks[index].state = true;
             localStorage.setItem('task-vue', JSON.stringify(this.tasks));
+            // let btnCheck = document.getElementById(index);
+            // btnCheck.style.display = 'none';
+            // console.log(btnCheck);
         },
         deleteTask(index){
             this.tasks.splice(index, 1);
