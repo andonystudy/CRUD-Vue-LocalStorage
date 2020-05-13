@@ -16,7 +16,9 @@
             CRUD - VUEJS & LOCALSTORAGE</a>
     </nav>
     <div class="container mt-5" id="app">
-
+        <div>
+            {{ title }}
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -35,7 +37,7 @@
                 <div class="container" v-for="(item, index) of tasks">
                     <div :class="['alert', item.state ? 'alert-success' : 'alert-danger']" role="alert">
                         <div class="d-flex justify-content-between align-items-center">
-                            <div>
+                            <div class="bg-primary">
                                 T-{{index + 1}} || {{item.name}}
                             </div>
                             <div>
@@ -54,6 +56,7 @@
     </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="JS/main.js"></script>
 </body>
