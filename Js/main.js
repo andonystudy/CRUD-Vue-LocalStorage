@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        title: 'TASK with Vue',
+        title: 'TASK with Vue fasfds',
         tasks: [],
         newTask: ''
     },
@@ -25,6 +25,8 @@ const app = new Vue({
             // let btnCheck = document.getElementById(index);
             // btnCheck.style.display = 'none';
             // console.log(btnCheck);
+
+            console.log('Este es un nuevo cambio en mi rama dev-aimar');
         },
         deleteTask(index){
             this.tasks.splice(index, 1);
